@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎬 CinemaTicket - Flutter Mobile App for Cinema Ticket Booking
 
 ## 📝 **Project Overview**
@@ -18,3 +19,21 @@ CinemaTicket is an innovative mobile application developed using Flutter, design
 - 💳 Simulate Ticket Booking Process
   
 
+=======
+# pemesanan_tiket_bisokop
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+>>>>>>> 223e066 ("Menambahkan Bloc")
