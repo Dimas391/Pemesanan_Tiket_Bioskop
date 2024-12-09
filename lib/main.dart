@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tiket_app/film_english.dart';
-import 'package:tiket_app/film_hindi.dart';
-import 'film_english.dart' as English;
-import 'film_hindi.dart' as Hindi;
-import 'film_horor.dart';
-import 'film_indonesia.dart';
-import 'film_marathi.dart';
-
+import 'home.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,278 +10,275 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MovieApp(),
+      home: LoginPage(), // Menjadikan LoginPage sebagai halaman utama
     );
   }
 }
 
-class MovieApp extends StatefulWidget {
+class LoginPage extends StatefulWidget {
   @override
-  _MovieAppState createState() => _MovieAppState();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _MovieAppState extends State<MovieApp> {
-  final List<String> languages = ['Hindi', 'English', 'Marathi', 'Indonesia', 'Horor'];
-  final List<English.MovieData> hindiMovies = [
-    English.MovieData(
-      title: 'Doctor Strange',
-      image: 'images/doctor.jpg',
-    ),
-    English.MovieData(
-      title: 'Blue Beetle',
-      image: 'images/jailer.jpeg',
-    ),
-    English.MovieData(
-      title: 'Jawan',
-      image: 'images/jawan.png',
-    ),
-  ];
-  final List<String> genres = ['Drama', 'Thriller', 'Action', 'Comedy', 'Crime'];
-  final List<Hindi.MovieData> dramaMovies = [
-    Hindi.MovieData(
-      title: 'Aquaman',
-      image: 'images/aquaman.png',
-    ),
-    Hindi.MovieData(
-      title: 'Lightyear',
-      image: 'images/disney.jpeg',
-    ),
-    Hindi.MovieData(
-      title: 'Lightyear',
-      image: 'images/superhero.jpg',
-    ),
-  ];
+class _LoginPageState extends State<LoginPage> {
+  final _formKey = GlobalKey<FormState>();
+  bool _obscureText = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      backgroundColor: Colors.transparent,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Text(
-          'Choose Movie',
-          style: TextStyle(
-            color: Colors.white70,
-            fontWeight: FontWeight.bold,
-            shadows: [
-              Shadow(
-                blurRadius: 10.0,
-                color: Colors.black54,
-                offset: Offset(2.0, 2.0),
-              ),
-            ],
-          ),
-        ),
-        centerTitle: true,
-      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color(0xFF121212), // Very dark gray (almost black)
-              Color(0xFF1E1E1E), // Slightly lighter dark gray
+              Color(0xFF121212), // Warna latar belakang atas
+              Color(0xFF1E1E1E), // Warna latar belakang bawah
             ],
           ),
         ),
         child: SafeArea(
-          child: Column(
-            children: [
-              // Search Bar
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextField(
-                  style: TextStyle(color: Colors.white70),
-                  decoration: InputDecoration(
-                    hintText: 'Search',
-                    hintStyle: TextStyle(color: Colors.white54),
-                    prefixIcon: Icon(Icons.search, color: Colors.white70),
-                    suffixIcon: Icon(Icons.mic, color: Colors.white70),
-                    filled: true,
-                    fillColor: Colors.grey[900]?.withOpacity(0.6),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide.none,
+          child: Center(
+            child: SingleChildScrollView(
+              padding: EdgeInsets.symmetric(horizontal: 24.0),
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    // Judul atau logo aplikasi
+                    Text(
+                      'Movie App',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 36,
+                        fontWeight: FontWeight.bold,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 10.0,
+                            color: Colors.black54,
+                            offset: Offset(2.0, 2.0),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ),
-              ),
+                    SizedBox(height: 40),
 
-              // Languages Row with Buttons
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: languages
-                      .map((language) => Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color.fromARGB(255, 141, 139, 139)?.withOpacity(0.6),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                              ),
-                              onPressed: () {
-                                if (language == 'Hindi') {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => HindiMoviesPage(),
-                                    ),
-                                  );
-                                }
-                                
-                                if (language == 'English') {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => EnglishMoviesPage(),
-                                    ),
-                                  );
-                                }
-
-                                if (language == 'Marathi') {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => marathiMoviesPage(),
-                                    ),
-                                  );
-                                }
-                                 if (language == 'Indonesia') {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => indonesiaMoviesPage(),
-                                    ),
-                                  );
-                                }
-                                 if (language == 'Horor') {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => hororMoviesPage(),
-                                    ),
-                                  );
-                                }
-
-                                // Anda bisa menambahkan kondisi untuk bahasa lain seperti English, dll.
-                              },
-                              child: Text(
-                                language,
-                                style: TextStyle(color: Colors.white70),
-                              ),
-                            ),
-                          ))
-                      .toList(),
-                ),
-              ),
-
-              // Hindi Movies
-              Expanded(
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.all(8),
-                  itemCount: hindiMovies.length,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Container(
-                        width: 150,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
-                          image: DecorationImage(
-                            image: AssetImage(hindiMovies[index].image),
-                            fit: BoxFit.cover,
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black87,
-                              blurRadius: 15,
-                              offset: Offset(0, 8),
-                            ),
-                          ],
+                    // TextField Email
+                    TextFormField(
+                      style: TextStyle(color: Colors.white70),
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.email, color: Colors.white70),
+                        hintText: 'Email',
+                        hintStyle: TextStyle(color: Colors.white54),
+                        filled: true,
+                        fillColor: Colors.grey[850],
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide.none,
                         ),
                       ),
-                    );
-                  },
-                ),
-              ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your email';
+                        }
+                        if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
+                          return 'Enter a valid email address';
+                        }
+                        return null;
+                      },
+                    ),
+                    SizedBox(height: 20),
 
-              // Genres Row
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8.0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: genres
-                        .map((genre) => Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                              child: Chip(
-                                label: Text(
-                                  genre,
-                                  style: TextStyle(color: Colors.white70),
-                                ),
-                                backgroundColor: Colors.grey[900]?.withOpacity(0.6),
-                              ),
-                            ))
-                        .toList(),
-                  ),
-                ),
-              ),
-
-              // Drama Movies
-              Expanded(
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.all(8),
-                  itemCount: dramaMovies.length,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Container(
-                        width: 150,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
-                          image: DecorationImage(
-                            image: AssetImage(dramaMovies[index].image),
-                            fit: BoxFit.cover,
+                    // TextField Password
+                    TextFormField(
+                      obscureText: _obscureText,
+                      style: TextStyle(color: Colors.white70),
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.lock, color: Colors.white70),
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _obscureText
+                                ? Icons.visibility_off
+                                : Icons.visibility,
+                            color: Colors.white70,
                           ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black87,
-                              blurRadius: 15,
-                              offset: Offset(0, 8),
-                            ),
-                          ],
+                          onPressed: () {
+                            setState(() {
+                              _obscureText = !_obscureText;
+                            });
+                          },
+                        ),
+                        hintText: 'Password',
+                        hintStyle: TextStyle(color: Colors.white54),
+                        filled: true,
+                        fillColor: Colors.grey[850],
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide.none,
                         ),
                       ),
-                    );
-                  },
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your password';
+                        }
+                        return null;
+                      },
+                    ),
+                    SizedBox(height: 20),
+
+                    // Tombol Lupa Password
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                            builder: (context) => homepage(),
+                        ),
+                        );
+                        },
+                        child: Text(
+                          'Forgot Password?',
+                          style: TextStyle(color: Color(0xFF00C9FF)),
+                        ),
+                      ),
+                    ),
+
+                    // Tombol Login
+                    ElevatedButton(
+                      onPressed: () {
+                        if (_formKey.currentState!.validate()) {
+                          // Placeholder untuk logika login
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Logging in...')),
+                          );
+                        }
+
+                         Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                            builder: (context) => homepage(),
+                        ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFF00C9FF),
+                        padding: EdgeInsets.symmetric(vertical: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                      ),
+                      child: Text(
+                        'Login',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+
+                    // Divider untuk opsi login lain
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Divider(
+                            color: Colors.white30,
+                            thickness: 1,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            'OR',
+                            style: TextStyle(color: Colors.white54),
+                          ),
+                        ),
+                        Expanded(
+                          child: Divider(
+                            color: Colors.white30,
+                            thickness: 1,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20),
+
+                    // Tombol login sosial media
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        _buildSocialButton(
+                          icon: Icons.facebook,
+                          color: Colors.blue,
+                          onPressed: () {
+                            // Placeholder untuk login Facebook
+                          },
+                        ),
+                        SizedBox(width: 20),
+                        _buildSocialButton(
+                          icon: Icons.email,
+                          color: Colors.red,
+                          onPressed: () {
+                            // Placeholder untuk login Google
+                          },
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20),
+
+                    // Opsi untuk Sign Up
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Don\'t have an account? ',
+                          style: TextStyle(color: Colors.white54),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            // Navigasi ke halaman Sign Up (Belum diimplementasi)
+                          },
+                          child: Text(
+                            'Sign Up',
+                            style: TextStyle(
+                              color: Color(0xFF00C9FF),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
-            ],
+            ),
           ),
         ),
       ),
+    );
+  }
 
-      // Bottom Navigation Bar
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        selectedItemColor: Color(0xFF00C9FF), // Light blue
-        unselectedItemColor: const Color.fromARGB(137, 12, 12, 12),
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.location_on), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
-        ],
-    ),
-);
-}
+  // Helper untuk membuat tombol sosial media
+  Widget _buildSocialButton({
+    required IconData icon,
+    required Color color,
+    required VoidCallback onPressed,
+  }) {
+    return Container(
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.2),
+        borderRadius: BorderRadius.circular(30),
+      ),
+      child: IconButton(
+        icon: Icon(icon, color: color),
+        onPressed: onPressed,
+      ),
+    );
+  }
 }
