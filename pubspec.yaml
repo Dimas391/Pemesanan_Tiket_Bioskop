@@ -114,6 +114,14 @@ flutter:
     - images/horor/8.jpeg
     - images/horor/9.jpeg
     - images/horor/10.jpg
+    - images/menu/1.png
+    - images/menu/2.jpg
+    - images/menu/3.jpeg
+    - images/menu/4.jpeg
+    - images/menu/6.jpeg
+    - images/menu/7.png
+    - images/menu/8.jpeg
+    - images/menu/9.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

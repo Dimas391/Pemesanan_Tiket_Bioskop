@@ -4,7 +4,14 @@ import 'film_hindi.dart';
 import 'film_indonesia.dart';
 import 'film_horor.dart';
 
-class marathiMoviesPage extends StatelessWidget {
+class marathiMoviesPage extends StatefulWidget {
+  @override
+  _marathiMoviesPageState createState() => _marathiMoviesPageState();
+}
+
+class _marathiMoviesPageState extends State<marathiMoviesPage> {
+  int _selectedIndex = 0;
+
   final List<MovieData> hindiMovies = [
     MovieData(title: 'Jawan', image: 'images/marathi/1.jpg'),
     MovieData(title: 'Jailer', image: 'images/marathi/tendliya.jpeg'),

@@ -3,8 +3,18 @@ import 'film_english.dart';
 import 'film_hindi.dart';
 import 'film_marathi.dart';
 import 'film_horor.dart';
+import 'pemesanan_makanan.dart';
+import 'home.dart';
 
-class indonesiaMoviesPage extends StatelessWidget {
+class indonesiaMoviesPage extends StatefulWidget {
+  @override
+  _indonesiaMoviesPageState createState() => _indonesiaMoviesPageState();
+}
+
+class _indonesiaMoviesPageState extends State<indonesiaMoviesPage> {
+  int _selectedIndex = 0;
+
+
   final List<MovieData> hindiMovies = [
     MovieData(title: 'Jawan', image: 'images/indonesia/1.jpg'),
     MovieData(title: 'Jailer', image: 'images/indonesia/2.jpeg'),
@@ -136,17 +146,44 @@ class indonesiaMoviesPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
+       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         selectedItemColor: Color(0xFF00C9FF), // Light blue
         unselectedItemColor: const Color.fromARGB(137, 12, 12, 12),
+        currentIndex: _selectedIndex,
+        onTap: (index) {
+          setState(() {
+            _selectedIndex = index;
+            if (_selectedIndex == 0) {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => homepage()),
+              );
+            } else if (_selectedIndex == 1) {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => marathiMoviesPage()),
+              );
+            } else if (_selectedIndex == 2) {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => SnackPage()),
+              );
+            } else if (_selectedIndex == 3) {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => SnackPage()),
+              );
+            }
+          });
+        },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.location_on), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.location_on), label: 'Location'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: 'Calendar'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
     );
