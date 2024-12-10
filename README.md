@@ -64,11 +64,12 @@ Berikut adalah beberapa Tampilan dari aplikasi CinemaTicket:
 
 **Tampilan halaman Daftar Film**
 
-<img src="image/4.jpg" alt="Screenshot 1" width="250" />
-<img src="image/2.jpg" alt="Screenshot 1" width="250" />
-<img src="image/10.jpg" alt="Screenshot 1" width="250" />
-<img src="image/111.jpg" alt="Screenshot 1" width="250" />
-
+<div style="display: flex; justify-content: space-between;">
+  <img src="image/4.jpg" alt="Screenshot 1" width="250" />
+  <img src="image/2.jpg" alt="Screenshot 2" width="250" />
+  <img src="image/10.jpg" alt="Screenshot 3" width="250" />
+  <img src="image/111.jpg" alt="Screenshot 4" width="250" />
+</div>
 
 
    
