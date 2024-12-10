@@ -13,10 +13,22 @@ CinemaTicket adalah aplikasi mobile inovatif yang dikembangkan menggunakan Flutt
    
 ## 🚀 **Features**
 - 🎥 Browse Latest Movies: Menampilkan daftar film terbaru sesuai kategori, seperti:
-  Film Indonesia
-  Film Horor
-  
-- 🎟️ Real-time Seat Selection
-- 📅 Show Schedules
-- 💳 Simulate Ticket Booking Process
+  - Film Indonesia
+  - Film Horor
+  - Film India
+  - Film English
+    
+- 🎟️ Real-time Seat Selection: Pilih kursi favorit Anda secara real-time dengan tampilan visual yang jelas.
+- 📅 Show Schedules: Melihat jadwal tayang film secara mudah dan interaktif.
+- 🍔 Food Ordering Page: Halaman pemesanan makanan dan minuman untuk melengkapi pengalaman bioskop.
+- 🪑 Seat Reservation Page: Halaman pemilihan kursi untuk pemesanan tiket.
+- ✅ Ticket Booking Process: Proses simulasi pemesanan tiket dengan detail lengkap.
+
+## 🔄 **How to Contribute**
+   1. Clone Repository
+      Clone proyek ke komputer lokal Anda:
+      git clone https://github.com/username/CinemaTicket.git
+
+
+
 
