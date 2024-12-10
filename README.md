@@ -91,7 +91,7 @@ Berikut adalah beberapa Tampilan dari aplikasi CinemaTicket:
 
 <div style="display: flex; justify-content: space-between;">
 <img src="image/11.jpg" alt="Screenshot 1" width="250" />
-<img src="image/9.jpg" alt="Screenshot 1" width="250" />
+<img src="image/9.jpg" alt="Screenshot 2" width="250" />
 </div>
 
 ## 🎬 **Final Thoughts**
