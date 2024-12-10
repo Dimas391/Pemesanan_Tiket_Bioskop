@@ -27,7 +27,9 @@ CinemaTicket adalah aplikasi mobile inovatif yang dikembangkan menggunakan Flutt
 ## 🔄 **How to Contribute**
    1. Clone Repository
       Clone proyek ke komputer lokal Anda:
+      ```bash
       git clone https://github.com/username/CinemaTicket.git
+      ```
 
 
 
