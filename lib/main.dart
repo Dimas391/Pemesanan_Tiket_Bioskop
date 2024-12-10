@@ -1,283 +1,348 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'dart:ui'; // Untuk menggunakan BackdropFilter
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(), // Menjadikan LoginPage sebagai halaman utama
+      home: ReservationScreen(),
     );
   }
 }
 
-class LoginPage extends StatefulWidget {
+class ReservationScreen extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _ReservationScreenState createState() => _ReservationScreenState();
 }
 
-class _LoginPageState extends State<LoginPage> {
-  final _formKey = GlobalKey<FormState>();
-  bool _obscureText = true;
+class _ReservationScreenState extends State<ReservationScreen> {
+  int selectedDateIndex = -1;
+  int selectedTimeIndex = -1;
+
+  final List<String> dates = ["Mon 2", "Tue 3", "Thu 5", "Sat 7", "Sun 8"];
+  final List<String> times = ["16:00", "18:00", "19:00", "21:00", "23:00"];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color(0xFF121212), // Warna latar belakang atas
-              Color(0xFF1E1E1E), // Warna latar belakang bawah
-            ],
-          ),
-        ),
-        child: SafeArea(
-          child: Center(
-            child: SingleChildScrollView(
-              padding: EdgeInsets.symmetric(horizontal: 24.0),
-              child: Form(
-                key: _formKey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    // Judul atau logo aplikasi
-                    Text(
-                      'Movie App',
+      backgroundColor: Colors.black,
+      body: Column(
+        children: [
+          // Bagian Sinopsis dengan Efek Blur
+          Stack(
+            children: [
+              Container(
+                height: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/doctorstrange.jpeg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Positioned.fill(
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+                  child: Container(
+                    color: Colors.black.withOpacity(0.5),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 16,
+                top: 40,
+                child: IconButton(
+                  icon: Icon(Icons.arrow_back, color: Colors.white),
+                  onPressed: () {},
+                ),
+              ),
+              Positioned(
+                right: 16,
+                top: 40,
+                child: IconButton(
+                  icon: Icon(Icons.more_vert, color: Colors.white),
+                  onPressed: () {},
+                ),
+              ),
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Text(
+                      "Doctor Strange\nin the Multiverse of Madness",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 36,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold,
                         shadows: [
                           Shadow(
-                            blurRadius: 10.0,
-                            color: Colors.black54,
-                            offset: Offset(2.0, 2.0),
+                            color: Colors.black,
+                            blurRadius: 8,
                           ),
                         ],
                       ),
                     ),
-                    SizedBox(height: 40),
-
-                    // TextField Email
-                    TextFormField(
-                      style: TextStyle(color: Colors.white70),
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.email, color: Colors.white70),
-                        hintText: 'Email',
-                        hintStyle: TextStyle(color: Colors.white54),
-                        filled: true,
-                        fillColor: Colors.grey[850],
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide.none,
-                        ),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter your email';
-                        }
-                        if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
-                          return 'Enter a valid email address';
-                        }
-                        return null;
-                      },
+                  ),
+                ),
+              ),
+            ],
+          ),
+          // Bagian Input Tanggal dan Waktu dengan Gradien Latar Belakang
+          // Bagian Input Tanggal dan Waktu dengan Gradien Latar Belakang
+          Expanded(
+            child: AnimatedContainer(
+              duration: Duration(milliseconds: 500),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Colors.purple, Colors.pink],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(24),
+                  topRight: Radius.circular(24),
+                ),
+              ),
+              padding: EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "Select Date & Time",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(height: 20),
-
-                    // TextField Password
-                    TextFormField(
-                      obscureText: _obscureText,
-                      style: TextStyle(color: Colors.white70),
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.lock, color: Colors.white70),
-                        suffixIcon: IconButton(
-                          icon: Icon(
-                            _obscureText
-                                ? Icons.visibility_off
-                                : Icons.visibility,
-                            color: Colors.white70,
-                          ),
-                          onPressed: () {
+                  ),
+                  SizedBox(height: 16),
+                  // Date Selection
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: List.generate(dates.length, (index) {
+                        bool isSelected = selectedDateIndex == index;
+                        return GestureDetector(
+                          onTap: () {
                             setState(() {
-                              _obscureText = !_obscureText;
+                              selectedDateIndex = index;
                             });
                           },
-                        ),
-                        hintText: 'Password',
-                        hintStyle: TextStyle(color: Colors.white54),
-                        filled: true,
-                        fillColor: Colors.grey[850],
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide.none,
-                        ),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter your password';
-                        }
-                        return null;
-                      },
-                    ),
-                    SizedBox(height: 20),
-
-                    // Tombol Lupa Password
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                            builder: (context) => homepage(),
-                        ),
-                        );
-                        },
-                        child: Text(
-                          'Forgot Password?',
-                          style: TextStyle(color: Color(0xFF00C9FF)),
-                        ),
-                      ),
-                    ),
-
-                    // Tombol Login
-                    ElevatedButton(
-                      onPressed: () {
-                        if (_formKey.currentState!.validate()) {
-                          // Placeholder untuk logika login
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text('Logging in...')),
-                          );
-                        }
-
-                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                            builder: (context) => homepage(),
-                        ),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF00C9FF),
-                        padding: EdgeInsets.symmetric(vertical: 16),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                      ),
-                      child: Text(
-                        'Login',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 20),
-
-                    // Divider untuk opsi login lain
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Divider(
-                            color: Colors.white30,
-                            thickness: 1,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10),
-                          child: Text(
-                            'OR',
-                            style: TextStyle(color: Colors.white54),
-                          ),
-                        ),
-                        Expanded(
-                          child: Divider(
-                            color: Colors.white30,
-                            thickness: 1,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 20),
-
-                    // Tombol login sosial media
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        _buildSocialButton(
-                          icon: Icons.facebook,
-                          color: Colors.blue,
-                          onPressed: () {
-                            // Placeholder untuk login Facebook
-                          },
-                        ),
-                        SizedBox(width: 20),
-                        _buildSocialButton(
-                          icon: Icons.email,
-                          color: Colors.red,
-                          onPressed: () {
-                            // Placeholder untuk login Google
-                          },
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 20),
-
-                    // Opsi untuk Sign Up
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Don\'t have an account? ',
-                          style: TextStyle(color: Colors.white54),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            // Navigasi ke halaman Sign Up (Belum diimplementasi)
-                          },
-                          child: Text(
-                            'Sign Up',
-                            style: TextStyle(
-                              color: Color(0xFF00C9FF),
-                              fontWeight: FontWeight.bold,
+                          child: AnimatedContainer(
+                            duration: Duration(milliseconds: 300),
+                            margin: EdgeInsets.symmetric(horizontal: 8),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 12, horizontal: 16),
+                            decoration: BoxDecoration(
+                              gradient: isSelected
+                                  ? LinearGradient(
+                                      colors: [Colors.pink, Colors.purple],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                    )
+                                  : null,
+                              color: isSelected
+                                  ? null
+                                  : Colors.white.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(
+                                color: isSelected
+                                    ? Colors.transparent
+                                    : Colors.white70,
+                              ),
+                            ),
+                            child: Text(
+                              dates[index],
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        );
+                      }),
                     ),
-                  ],
-                ),
+                  ),
+                  SizedBox(height: 16),
+                  // Time Selection
+                  Expanded(
+                    child: LayoutBuilder(
+                      builder: (context, constraints) {
+                        // Menentukan lebar elemen berdasarkan ukuran layar
+                        double itemWidth =
+                            (constraints.maxWidth - 32) / 3; // 3 kolom
+                        double itemHeight =
+                            60; // Tinggi tetap untuk menjaga proporsi
+
+                        return GridView.builder(
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3, // Jumlah kolom grid
+                            mainAxisSpacing: 8,
+                            crossAxisSpacing: 8,
+                            childAspectRatio: itemWidth / itemHeight,
+                          ),
+                          itemCount: times.length,
+                          itemBuilder: (context, index) {
+                            bool isSelected = selectedTimeIndex == index;
+                            return GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  selectedTimeIndex = index;
+                                });
+                              },
+                              child: AnimatedContainer(
+                                duration: Duration(milliseconds: 300),
+                                width: itemWidth,
+                                height: itemHeight,
+                                padding: EdgeInsets.symmetric(vertical: 12),
+                                decoration: BoxDecoration(
+                                  gradient: isSelected
+                                      ? LinearGradient(
+                                          colors: [Colors.pink, Colors.purple],
+                                          begin: Alignment.topLeft,
+                                          end: Alignment.bottomRight,
+                                        )
+                                      : null,
+                                  color: isSelected
+                                      ? null
+                                      : Colors.white.withOpacity(0.1),
+                                  borderRadius: BorderRadius.circular(12),
+                                  border: Border.all(
+                                    color: isSelected
+                                        ? Colors.transparent
+                                        : Colors.white70,
+                                  ),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    times[
+                                        index], // Menampilkan jam dari daftar `times`
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    maxLines: 1, // Membatasi teks hanya 1 baris
+                                    overflow: TextOverflow
+                                        .ellipsis, // Teks tidak terpotong
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ),
+
+                  SizedBox(height: 16),
+                  // Reservation Button
+                  ElevatedButton(
+                    onPressed: selectedDateIndex >= 0 && selectedTimeIndex >= 0
+                        ? () {
+                            final selectedDate = dates[selectedDateIndex];
+                            final selectedTime = times[selectedTimeIndex];
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return Dialog(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  backgroundColor: Colors.white,
+                                  child: Container(
+                                    padding: EdgeInsets.all(24),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        // Icon atau Animasi
+                                        Icon(
+                                          Icons.check_circle,
+                                          color: Colors.green,
+                                          size: 64,
+                                        ),
+                                        SizedBox(height: 16),
+                                        // Judul
+                                        Text(
+                                          "Reservation Confirmed!",
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black87,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        SizedBox(height: 12),
+                                        // Deskripsi
+                                        Text(
+                                          "You have selected $selectedDate at $selectedTime.\nThank you for your reservation!",
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.black54,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        SizedBox(height: 24),
+                                        // Tombol
+                                        ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor: Colors.pink,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(12),
+                                            ),
+                                            padding: EdgeInsets.symmetric(
+                                                vertical: 12, horizontal: 32),
+                                          ),
+                                          child: Text(
+                                            "OK",
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                color: Colors.white),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            );
+                          }
+                        : null,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.pink,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: Text(
+                      "Reserve Now",
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
-        ),
-      ),
-    );
-  }
-
-  // Helper untuk membuat tombol sosial media
-  Widget _buildSocialButton({
-    required IconData icon,
-    required Color color,
-    required VoidCallback onPressed,
-  }) {
-    return Container(
-      decoration: BoxDecoration(
-        color: color.withOpacity(0.2),
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child: IconButton(
-        icon: Icon(icon, color: color),
-        onPressed: onPressed,
+        ],
       ),
     );
   }
