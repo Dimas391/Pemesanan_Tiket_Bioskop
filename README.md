@@ -91,9 +91,7 @@ Berikut adalah beberapa Tampilan dari aplikasi CinemaTicket:
 </div>
 
 ## 🎬 **Final Thoughts**
-CinemaTicket bukan hanya aplikasi pemesanan tiket bioskop biasa, tetapi sebuah solusi untuk pengalaman menonton film yang lebih praktis dan menyenangkan. Dengan antarmuka yang modern dan fitur-fitur canggih, pengguna dapat dengan mudah menemukan film favorit, memilih kursi terbaik, dan menikmati makanan pilihan tanpa perlu repot.
-Kami berharap aplikasi ini dapat memberikan kenyamanan lebih bagi penggemar bioskop, membuat setiap perjalanan ke bioskop lebih mudah dan menyenangkan. Dengan tampilan yang responsif dan fitur interaktif, CinemaTicket siap memenuhi kebutuhan hiburan Anda.
-Terima kasih telah menjelajahi proyek ini! Kami mengundang Anda untuk mencoba, memberi masukan, atau bahkan berkontribusi melalui issue atau pull request di repository ini. Kami terus berusaha untuk meningkatkan aplikasi agar dapat memberikan pengalaman terbaik bagi penggunanya.
+CinemaTicket dirancang untuk memberikan gambaran antarmuka dan pengalaman pengguna dalam memesan tiket bioskop. Proyek ini berfokus pada desain dan tata letak yang modern, memberikan ilustrasi bagaimana sebuah aplikasi pemesanan tiket bioskop dapat terlihat dan berfungsi. Harap dicatat bahwa ini hanya merupakan tampilan antarmuka (mockup) tanpa fungsionalitas penuh. Kami berharap tampilan ini dapat memberikan inspirasi atau menjadi referensi dalam pengembangan aplikasi serupa.
 
 ## 📞 **Contact**
 - [@Dimas391](https://github.com/Dimas391)
