@@ -22,8 +22,8 @@ CinemaTicket adalah aplikasi mobile inovatif yang dikembangkan menggunakan Flutt
 - 📅 Show Schedules: Melihat jadwal tayang film secara mudah dan interaktif.
 - 🍔 Food Ordering Page: Halaman pemesanan makanan dan minuman untuk melengkapi pengalaman bioskop.
 - 🪑 Seat Reservation Page: Halaman pemilihan kursi untuk pemesanan tiket.
-- ✅ Ticket Booking Process: Proses simulasi pemesanan tiket dengan detail lengkap.
-
+- 🧑‍💼 Profile: Halaman profil pengguna untuk melihat dan mengelola informasi pribadi.
+  
 ## 🔧 **How to Start or Run the Project**
 
 #### 1. Clone Repository
