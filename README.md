@@ -26,26 +26,26 @@ CinemaTicket adalah aplikasi mobile inovatif yang dikembangkan menggunakan Flutt
 
 ## 🔧 **How to Start or Run the Project**
 
-### 1. Clone Repository
+#### 1. Clone Repository
 Clone proyek ke komputer lokal Anda:
 ```bash
 git clone https://github.com/Dimas391/Pemesanan_Tiket_Bioskop.git
 ```
       
-### 2. Masuk ke Direktori Proyek
+#### 2. Masuk ke Direktori Proyek
 Navigasikan ke folder proyek yang baru saja di-clone:
 ```bash
 cd Pemesanan_Tiket_Bioskop
 ```      
    
-### 3. Instalasi Flutter dan Dependencies
+#### 3. Instalasi Flutter dan Dependencies
 Pastikan Flutter sudah terinstal di sistem Anda.
 Lalu, instal semua dependensi yang diperlukan proyek:
 ```bah
 flutter pub get
 ```      
 
-### 4. Jalankan Proyek
+#### 4. Jalankan Proyek
 kemudian jalankan proyek menggunakan perintah berikut:
 ```bah
 flutter run
