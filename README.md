@@ -71,11 +71,11 @@ Berikut adalah beberapa Tampilan dari aplikasi CinemaTicket:
   <img src="image/111.jpg" alt="Screenshot 4" width="250" />
 </div>
 
-**halaman Pemilihan Kursi**
+**halaman Pemilihan Jadwal Tayang**
 
 <img src="image/6.jpg" alt="Screenshot 1" width="250" />
 
-**halaman Pemilihan Jadwal Tayang**
+**halaman Pemilihan Kursi**
 
 <img src="image/1.jpg" alt="Screenshot 1" width="250" />
 
