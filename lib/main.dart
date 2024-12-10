@@ -77,25 +77,25 @@ class _CategoryPageState extends State<CategoryPage> {
               MenuItem(
                 name: "Large Pepsi 810ml",
                 details: "348 Kcal | Allergens: Caffeine",
-                price: "₹429.45",
+                price: "25.000",
                 image: "assets/pepsi.png",
               ),
               MenuItem(
                 name: "Spicy Chicken Focaccia Sandwich 190g",
                 details: "456 Kcal | Allergens: Milk, Wheat, Gluten",
-                price: "₹299.25",
+                price: "50.000",
                 image: "assets/sandwich.png",
               ),
               MenuItem(
                 name: "Crispy Paneer Burger 170g",
                 details: "653 Kcal | Allergens: Milk, Wheat, Soybean, Gluten",
-                price: "₹319.20",
+                price: "35.000",
                 image: "assets/burger.png",
               ),
               MenuItem(
-                name: "Combo 2 (Salted)",
+                name: "Ayam Goreng (Salted)",
                 details: "1159 Kcal | Allergens: Milk, Caffeine",
-                price: "₹988.05",
+                price: "15.000",
                 image: "assets/combo2.png",
               ),
             ],
@@ -146,7 +146,7 @@ class MenuItem extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.pink,
+                backgroundColor: const Color.fromARGB(255, 30, 233, 77),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
               ),
               child: const Text("Add"),
