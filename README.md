@@ -58,6 +58,17 @@ Berikut adalah beberapa Tampilan dari aplikasi CinemaTicket:
 
 <img src="image/3.jpg" alt="Screenshot 1" width="250" />
 
+**Tampilan halaman Beranda**
+
+<img src="image/7.jpg" alt="Screenshot 1" width="250" />
+
+**Tampilan halaman Daftar Film**
+
+<img src="image/4.jpg" alt="Screenshot 1" width="250" />
+<img src="image/2.jpg" alt="Screenshot 1" width="250" />
+<img src="image/10.jpg" alt="Screenshot 1" width="250" />
+<img src="image/111.jpg" alt="Screenshot 1" width="250" />
+
 
 
    
