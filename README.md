@@ -54,8 +54,8 @@ flutter run
 ## 📸 **Hasil Project**
 Berikut adalah beberapa Tampilan dari aplikasi CinemaTicket:
 
-<img src="image/1.jpg" alt="Screenshot 1" width="270" />
-_Deskripsi gambar: Tampilan daftar film terbaru_
+<img src="image/3.jpg" alt="Screenshot 1" width="250" />
+_Deskripsi gambar: Tampilan halaman login_
 
    
 
