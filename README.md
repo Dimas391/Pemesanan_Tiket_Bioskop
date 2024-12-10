@@ -83,10 +83,6 @@ Berikut adalah beberapa Tampilan dari aplikasi CinemaTicket:
 
 <img src="image/8.jpg" alt="Screenshot 1" width="250" />
 
-**halaman Pemesanan Menu Makanan**
-
-<img src="image/8.jpg" alt="Screenshot 1" width="250" />
-
 **halaman Profile**
 
 <div style="display: flex; justify-content: space-between;">
@@ -100,8 +96,12 @@ Kami berharap aplikasi ini dapat memberikan kenyamanan lebih bagi penggemar bios
 Terima kasih telah menjelajahi proyek ini! Kami mengundang Anda untuk mencoba, memberi masukan, atau bahkan berkontribusi melalui issue atau pull request di repository ini. Kami terus berusaha untuk meningkatkan aplikasi agar dapat memberikan pengalaman terbaik bagi penggunanya.
 
 ## 📞 **Contact**
-- @Dimas391
-- 
+- [@Dimas391](https://github.com/Dimas391)
+- [@Alfitrah1208](https://github.com/Alfitrah1208)
+- [@Juanda435](https://github.com/Juanda435)
+- [@Mulyani017](https://github.com/Mulyani017)
+- [@vayuningtyas](https://github.com/vayuningtyas)
+- [@zamhur23](https://github.com/zamhur23)
 
 
 
