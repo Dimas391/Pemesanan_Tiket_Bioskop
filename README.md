@@ -126,7 +126,7 @@ CinemaTicket dirancang untuk memberikan gambaran antarmuka dan pengalaman penggu
 - [@Mulyani017](https://github.com/Mulyani017)
 - [@vayuningtyas](https://github.com/vayuningtyas)
 - [@zamhur23](https://github.com/zamhur23)
-- 
+  
 
 
 
