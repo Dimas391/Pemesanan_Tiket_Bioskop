@@ -1,4 +1,4 @@
-# 🎬 CinemaTicket - Flutter Mobile App for Cinema Ticket Booking
+# 🎬 CinemaTicket - Flutter Mobile App for Cinema Ticket Bookingi
 
 ## 📝 **Project Overview**
 CinemaTicket adalah aplikasi mobile inovatif yang dikembangkan menggunakan Flutter untuk mempermudah proses pemesanan tiket bioskop. Proyek ini berfokus pada antarmuka pengguna yang intuitif, memberikan pengalaman yang lancar untuk mencari film, memilih tempat duduk, hingga memesan tiket.
