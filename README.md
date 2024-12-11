@@ -99,13 +99,17 @@ Di halaman pemesanan menu makanan terdapat fitur pencarian (search bar) memungki
 
 #### halaman Booking
 
-Halaman pertama adalah *Booking Summary*, yang menampilkan rincian tiket yang dipesan, termasuk kategori "Classic", posisi kursi (Baris ke-3, Kursi 15 & 16), harga tiket sebesar Rs 800, dan biaya tambahan berupa Convenience Fee sebesar Rs 115.64. Halaman ini juga mencantumkan pesanan makanan dan minuman, seperti Nachos with Cheese & Salsa (90g) seharga Rs 399, Strawberry & Mint Mocktail (450ml) seharga Rs 339.15, dan Regular Caramel Popcorn (90g) seharga Rs 438.90. Total biaya yang harus dibayar adalah Rs 2094, dan pengguna dapat melanjutkan ke proses pembayaran dengan menekan tombol **Proceed**.
+**Booking Summary**:  
+   Pengguna akan melihat rincian tiket yang dipesan, termasuk kategori kursi, posisi tempat duduk, harga tiket, dan biaya tambahan (seperti Convenience Fee). Rincian pemesanan makanan dan minuman juga ditampilkan. Setelah memastikan semua informasi benar, pengguna dapat melanjutkan ke tahap pembayaran dengan menekan tombol **Proceed**.
 
-Halaman kedua adalah *Payment Options*, yang menawarkan berbagai pilihan metode pembayaran. Pengguna dapat memilih untuk membayar menggunakan Debit/Credit Card, Net Banking, Mobile Wallets, UPI, atau Gift Voucher. Informasi jumlah yang harus dibayar, yakni Rs 2094, ditampilkan di bagian atas halaman.
+**Payment Options**:  
+   Di halaman ini, pengguna memilih metode pembayaran, seperti kartu debit/kredit, net banking, mobile wallet, UPI, atau voucher hadiah. Jumlah total yang harus dibayar ditampilkan di bagian atas layar. Setelah memilih metode, pengguna melanjutkan ke detail pembayaran.
 
-Halaman ketiga adalah *Payment Details*, yang memungkinkan pengguna memasukkan informasi kartu pembayaran, seperti nomor kartu, nama pada kartu, tanggal kedaluwarsa (MM/YY), dan CVV. Selain itu, halaman ini menampilkan ringkasan pemesanan yang mencakup tanggal dan waktu (2 Oktober 2023, pukul 19:00), jumlah orang (2 orang), posisi kursi (Baris ke-3, Kursi 15 & 16), dan total biaya (Rs 2094). Setelah mengisi detail pembayaran, pengguna dapat menekan tombol **BUY** untuk menyelesaikan transaksi.
+**Payment Details**:  
+   Pengguna memasukkan detail pembayaran, seperti nomor kartu, nama pemegang kartu, tanggal kedaluwarsa, dan CVV. Selain itu, halaman ini menampilkan ringkasan pemesanan untuk memastikan informasi sudah benar. Setelah semua data diisi, pengguna menekan tombol **BUY** untuk melanjutkan ke langkah akhir.
 
-Halaman keempat adalah antarmuka pembayaran untuk menyelesaikan transaksi tiket. Total yang harus dibayar adalah **Rs: 2094**. Pengguna dapat memasukkan nomor *gift voucher* untuk mengurangi biaya. Informasi pemesanan mencakup tanggal **2 Oktober 2023**, waktu **19:00**, untuk **2 orang**, dengan kursi di **Baris 3, Nomor 15 dan 16**. Transaksi dapat diselesaikan dengan menekan tombol "BUY".
+**Payment Confirmation**:  
+   Halaman ini memungkinkan pengguna menyelesaikan transaksi. Jika memiliki gift voucher, pengguna dapat memasukkan nomor voucher untuk mengurangi total biaya. Setelah memverifikasi semua informasi, pengguna menekan tombol **BUY** untuk menyelesaikan pembayaran dan mengonfirmasi pemesanan.
 
 <div style="display: flex; justify-content: space-between;">
 <img src="image/1.png" alt="Screenshot 1" width="250" />
