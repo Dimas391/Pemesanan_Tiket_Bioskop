@@ -84,6 +84,8 @@ Aplikasi Tiket menyediakan berbagai kategori film terbaru untuk memudahkan pengg
 
 #### halaman Pemilihan Jadwal Tayang
 
+Halaman pemilihan jadwal ini memungkinkan pengguna untuk menentukan waktu yang diinginkan dengan mudah. Di bagian atas, pengguna dapat melihat informasi tentang film yang akan ditonton. Di bawahnya, terdapat opsi pemilihan tanggal yang disusun dalam format hari dan tanggal, sehingga pengguna dapat memilih hari yang sesuai. Setelah memilih tanggal, pengguna dapat melihat dan memilih jam penayangan yang tersedia, yang ditampilkan dalam kotak-kotak berisi pilihan waktu. Untuk melanjutkan proses pemesanan, pengguna cukup menekan tombol "Reserve Now" di bagian bawah halaman. Desain halaman ini dibuat dengan tampilan modern dan intuitif, memadukan warna gradien untuk memberikan pengalaman yang nyaman dan menarik.
+
 <img src="image/6.jpg" alt="Screenshot 1" width="250" />
 
 #### halaman Pemilihan Kursi
