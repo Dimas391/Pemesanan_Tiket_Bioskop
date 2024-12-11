@@ -54,17 +54,17 @@ flutter run
 ## 📸 **Hasil Project**
 Berikut adalah beberapa Tampilan dari aplikasi CinemaTicket:
 
-####halaman login####
+####halaman login
 Halaman login adalah bagian pertama yang akan dijumpai oleh pengguna saat mengakses aplikasi pemesanan tiket. Tujuan dari halaman ini adalah untuk mengautentikasi pengguna sebelum mereka dapat mengakses berbagai fitur dalam aplikasi.
 
 <img src="image/3.jpg" alt="Screenshot 1" width="250" />
 
-####halaman Beranda####
+####halaman Beranda
 Halaman beranda adalah halaman utama yang akan dilihat oleh pengguna setelah berhasil login ke aplikasi pemesanan tiket. Halaman ini menyediakan berbagai fitur untuk memudahkan pengguna dalam menemukan dan memilih film yang ingin ditonton. Salah satu fitur utama pada halaman beranda adalah **Browse Latest Movies**, yang menampilkan daftar film terbaru berdasarkan kategori seperti film india, horor, inggris, dan indonesia.
 
 <img src="image/7.jpg" alt="Screenshot 1" width="250" />
 
-####halaman Daftar Film####
+####halaman Daftar Film
 Aplikasi Tiket menyediakan berbagai kategori film terbaru untuk memudahkan pengguna dalam menemukan film yang sesuai dengan preferensi mereka. Berikut adalah kategori film yang dapat dipilih oleh pengguna:
 - **Film Indonesia**
   Menampilkan film-film terbaru yang berasal dari Indonesia. Kategori ini berisi berbagai genre film yang populer di kalangan penonton Indonesia. Pengguna   dapat menemukan film-film terbaru dari berbagai genre seperti drama, komedi, aksi, dan lainnya yang diproduksi oleh sineas Indonesia.
@@ -82,19 +82,19 @@ Aplikasi Tiket menyediakan berbagai kategori film terbaru untuk memudahkan pengg
   <img src="image/111.jpg" alt="Screenshot 4" width="250" />
 </div>
 
-####halaman Pemilihan Jadwal Tayang####
+####halaman Pemilihan Jadwal Tayang
 
 <img src="image/6.jpg" alt="Screenshot 1" width="250" />
 
-####halaman Pemilihan Kursi####
+####halaman Pemilihan Kursi
 
 <img src="image/1.jpg" alt="Screenshot 1" width="250" />
 
-####halaman Pemesanan Menu Makanan####
+####halaman Pemesanan Menu Makanan
 
 <img src="image/8.jpg" alt="Screenshot 1" width="250" />
 
-####halaman Booking####
+####halaman Booking
 
 <div style="display: flex; justify-content: space-between;">
 <img src="image/1.png" alt="Screenshot 1" width="250" />
@@ -104,7 +104,7 @@ Aplikasi Tiket menyediakan berbagai kategori film terbaru untuk memudahkan pengg
 </div>
 
 
-####halaman Profile####
+####halaman Profile
 
 Halaman profil yang terdiri dari dua halaman utama. Halaman pertama (kiri) adalah menu profil yang mencakup berbagai fitur seperti "Pesanan Anda" untuk melihat atau membeli tiket, "Stream Library" untuk streaming video, "Bayar Kartu Kredit" untuk pembayaran, "Pusat Bantuan" untuk bantuan, "Akun & Pengaturan " untuk pengaturan profil, "Rewards" untuk menukarkan poin, "Offers" untuk promo terbaru, dan "Food & Beverages" untuk memesan makanan. Halaman kedua (kanan) adalah formulir edit profil yang memungkinkan pengguna memperbarui nomor telepon, email, dan detail pribadi dengan tombol "Simpan Perubahan" di bagian bawah untuk menyimpan perubahan. 
 
