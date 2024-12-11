@@ -93,6 +93,7 @@ Berikut adalah beberapa Tampilan dari aplikasi CinemaTicket:
 </div>
 
 **halaman Profile**
+
 Halaman profil yang terdiri dari dua halaman utama. Halaman pertama (kiri) adalah menu profil yang mencakup berbagai fitur seperti "Pesanan Anda" untuk melihat atau membeli tiket, "Stream Library" untuk streaming video, "Bayar Kartu Kredit" untuk pembayaran, "Pusat Bantuan" untuk bantuan, "Akun & Pengaturan " untuk pengaturan profil, "Rewards" untuk menukarkan poin, "Offers" untuk promo terbaru, dan "Food & Beverages" untuk memesan makanan. Halaman kedua (kanan) adalah formulir edit profil yang memungkinkan pengguna memperbarui nomor telepon, email, dan detail pribadi dengan tombol "Simpan Perubahan" di bagian bawah untuk menyimpan perubahan. 
 
 <div style="display: flex; justify-content: space-between;">
