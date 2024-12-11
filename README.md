@@ -98,9 +98,6 @@ Di halaman pemesanan menu makanan terdapat fitur pencarian (search bar) memungki
 <img src="image/8.jpg" alt="Screenshot 1" width="250" />
 
 #### halaman Booking
-Berikut adalah deskripsi dalam bentuk kalimat seperti yang diminta:
-
----
 
 Halaman pertama adalah *Booking Summary*, yang menampilkan rincian tiket yang dipesan, termasuk kategori "Classic", posisi kursi (Baris ke-3, Kursi 15 & 16), harga tiket sebesar Rs 800, dan biaya tambahan berupa Convenience Fee sebesar Rs 115.64. Halaman ini juga mencantumkan pesanan makanan dan minuman, seperti Nachos with Cheese & Salsa (90g) seharga Rs 399, Strawberry & Mint Mocktail (450ml) seharga Rs 339.15, dan Regular Caramel Popcorn (90g) seharga Rs 438.90. Total biaya yang harus dibayar adalah Rs 2094, dan pengguna dapat melanjutkan ke proses pembayaran dengan menekan tombol **Proceed**.
 
@@ -109,10 +106,6 @@ Halaman kedua adalah *Payment Options*, yang menawarkan berbagai pilihan metode 
 Halaman ketiga adalah *Payment Details*, yang memungkinkan pengguna memasukkan informasi kartu pembayaran, seperti nomor kartu, nama pada kartu, tanggal kedaluwarsa (MM/YY), dan CVV. Selain itu, halaman ini menampilkan ringkasan pemesanan yang mencakup tanggal dan waktu (2 Oktober 2023, pukul 19:00), jumlah orang (2 orang), posisi kursi (Baris ke-3, Kursi 15 & 16), dan total biaya (Rs 2094). Setelah mengisi detail pembayaran, pengguna dapat menekan tombol **BUY** untuk menyelesaikan transaksi.
 
 Halaman keempat adalah antarmuka pembayaran untuk menyelesaikan transaksi tiket. Total yang harus dibayar adalah **Rs: 2094**. Pengguna dapat memasukkan nomor *gift voucher* untuk mengurangi biaya. Informasi pemesanan mencakup tanggal **2 Oktober 2023**, waktu **19:00**, untuk **2 orang**, dengan kursi di **Baris 3, Nomor 15 dan 16**. Transaksi dapat diselesaikan dengan menekan tombol "BUY".
-
----
-
-Semoga format ini sesuai dengan yang Anda maksud! Jika perlu revisi, beri tahu saya.
 
 <div style="display: flex; justify-content: space-between;">
 <img src="image/1.png" alt="Screenshot 1" width="250" />
