@@ -91,7 +91,7 @@ Aplikasi Tiket menyediakan berbagai kategori film terbaru untuk memudahkan pengg
 <img src="image/1.jpg" alt="Screenshot 1" width="250" />
 
 #### halaman Pemesanan Menu Makanan
-
+Di halaman pemesanan menu makanan terdapat fitur pencarian (search bar) memungkinkan pengguna untuk mencari item secara langsung, sementara ikon mikrofon memberikan opsi pencarian melalui perintah suara. Di bawahnya, terdapat tab kategori seperti All, Combos, Snacks, Beverages, dan Popcorn yang membantu mengorganisasikan produk berdasarkan jenisnya sehingga mempermudah navigasi pengguna.Setiap produk ditampilkan dalam bentuk kartu yang mencakup informasi penting seperti nama produk, deskripsi (termasuk ukuran, kalori, dan alergen), harga dalam mata uang lokal, serta gambar untuk memvisualisasikan produk tersebut. Desain ini memastikan informasi disampaikan dengan jelas kepada pengguna. Tombol “Add” pada setiap kartu memungkinkan pengguna untuk menambahkan item ke keranjang belanja dengan cepat dan mudah, mendukung pengalaman pemesanan yang efisien.
 <img src="image/8.jpg" alt="Screenshot 1" width="250" />
 
 #### halaman Booking
