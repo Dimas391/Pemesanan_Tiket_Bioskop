@@ -5,7 +5,7 @@ CinemaTicket adalah aplikasi mobile inovatif yang dikembangkan menggunakan Flutt
 
 ## 👥 **Project Team**
 1. Dimas Kurniawan
-2. Muhammad Alfitrah
+2. Muhammad Alfitrahh
 3. Mulyani
 4. Sulthan Juanda Al-Muttaqin
 5. Vidya Ayu Ningtyas
