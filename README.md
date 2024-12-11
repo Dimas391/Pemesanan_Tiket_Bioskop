@@ -87,7 +87,7 @@ Aplikasi Tiket menyediakan berbagai kategori film terbaru untuk memudahkan pengg
 <img src="image/6.jpg" alt="Screenshot 1" width="250" />
 
 #### halaman Pemilihan Kursi
-
+Ini adalah halaman pemesanan kursi bioskop yang dirancang untuk mempermudah pengguna dalam memilih tempat duduk secara interaktif. Di bagian atas halaman terdapat judul "Choose Seats," yang menunjukkan bahwa ini adalah tahap pemilihan kursi. Setiap kursi ditampilkan dalam bentuk ikon kecil, dengan statusnya ditandai menggunakan warna. Kursi berwarna putih menandakan ketersediaan, merah menunjukkan kursi yang sudah dipesan, dan hijau menandakan kursi yang telah dipilih oleh pengguna.
 <img src="image/1.jpg" alt="Screenshot 1" width="250" />
 
 #### halaman Pemesanan Menu Makanan
