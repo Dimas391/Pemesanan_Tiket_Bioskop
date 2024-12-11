@@ -85,10 +85,12 @@ Berikut adalah beberapa Tampilan dari aplikasi CinemaTicket:
 
 **halaman Booking**
 
+<div style="display: flex; justify-content: space-between;">
 <img src="image/1.png" alt="Screenshot 1" width="250" />
 <img src="image/2.png" alt="Screenshot 1" width="250" />
 <img src="image/3.png" alt="Screenshot 1" width="250" />
 <img src="image/4.png" alt="Screenshot 1" width="250" />
+</div>
 
 **halaman Profile**
 
